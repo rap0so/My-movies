@@ -1,6 +1,6 @@
 {
-  "name": "micro-frontend-app",
-  "version": "0.2.0",
+  "name": "my-movies",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
@@ -15,17 +15,13 @@
     "test:cov": "react-scripts test --coverage --passWithNoTests --watchAll=false",
     "test:watch": "react-scripts test",
     "test:e2e:push": "PORT=4100 start-server-and-test start 4100 cy:run",
-    "test:e2e": "PORT=4100 start-server-and-test start 4100 cy:open",
-    "prepare": "husky install"
+    "test:e2e": "PORT=4100 start-server-and-test start 4100 cy:open"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
     "@chakra-ui/react": "^1.7.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "apollo-boost": "^0.4.9",
     "framer-motion": "^5",
-    "graphql": "^16.2.0",
     "lint-staged": ">=10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
