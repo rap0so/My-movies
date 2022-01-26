@@ -1,8 +1,8 @@
 import { Box, useBoolean, useOutsideClick } from '@chakra-ui/react';
-import { FC, useCallback, useMemo, useRef } from 'react';
+import { FC, useMemo, useRef } from 'react';
 import debounce from 'lodash.debounce';
 
-import { inputClosedStyle, inputOpenedStyle } from './SearchBar.style';
+import { inputClosedStyle, inputOpenedStyle } from './searchBar.style';
 import { TSearchBarContainerProps, THandleOnChangeFn } from './types';
 import SearchBar from './SearchBar';
 
@@ -27,9 +27,7 @@ const SearchBarContainer: FC<TSearchBarContainerProps> = ({ setQuery }) => {
     return setQuery(target.value);
   };
 
-  const handleOnChangeDebounced = useCallback(debounce(handleOnChange, 300), [
-    handleOnChange,
-  ]);
+  const handleOnChangeDebounced = debounce(handleOnChange, 300);
 
   return (
     <Box ref={ref}>
