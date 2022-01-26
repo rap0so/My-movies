@@ -5,12 +5,11 @@ import { FC } from 'react';
 import { iconStyle } from './SearchBar.style';
 
 const SearchBar: FC<TSearchBarProps> = ({
-  ref,
   handleOnChangeDebounced,
   inputStyle,
   onClick,
 }) => (
-  <Flex alignItems="center" justifyContent="space-between" ref={ref}>
+  <Flex alignItems="center" justifyContent="space-between">
     <Input style={inputStyle} onChange={handleOnChangeDebounced} />
     <Box ml="3" onClick={onClick} cursor="pointer">
       <i className="fas fa-search fa-lg" style={iconStyle} />
