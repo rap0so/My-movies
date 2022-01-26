@@ -5,8 +5,9 @@ const theme = {
   colors,
   styles: {
     global: {
+      '*': { transition: 'all .3s ease!important' },
       'html, body': {
-        backgroundColor: '#181818',
+        backgroundColor: '#060606',
         color: 'text',
         lineHeight: 'tall',
       },
