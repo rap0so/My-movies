@@ -12,7 +12,7 @@ export type TCardModalProps = {
   description: string;
 };
 
-export type TCardContainerProps = {
+export type TCardContainerProps = TCardControlFn & {
   backdrop: string | null;
   poster: string;
   title: string;
@@ -20,7 +20,16 @@ export type TCardContainerProps = {
   id: number;
 };
 
-export type TCardControls = {
-  onAddToList: () => void;
-  onAddToFavorite: () => void;
+type TCardControlBase = (arg?: any) => void;
+
+export type TCardControlFn = {
+  onAddToList: TCardControlBase;
+  onAddToFavorite: TCardControlBase;
 };
+
+export type TCardControlsPreFn = {
+  onAddToList: (id: number) => TCardControlBase;
+  onAddToFavorite: (id: number) => TCardControlBase;
+};
+
+export type TCardControlsProps = TCardControlFn & {};

@@ -1,12 +1,12 @@
-import { Flex, Image, useDisclosure } from '@chakra-ui/react';
+import { Box, useDisclosure } from '@chakra-ui/react';
 import { FC } from 'react';
 
-import Card from './Card';
+import CardBody from './Card.body';
 import CardModal from './Card.modal';
 import CardControls from './Card.controls';
-import { cardStyle } from './card.style';
 
 import { TCardContainerProps } from './types';
+import { cardStyle } from './card.style';
 
 const CardContainer: FC<TCardContainerProps> = ({
   backdrop,
@@ -14,14 +14,19 @@ const CardContainer: FC<TCardContainerProps> = ({
   title,
   description,
   id,
+  onAddToList,
+  onAddToFavorite,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
-      <Card onOpen={onOpen} poster={poster} />
+    <Box sx={cardStyle}>
+      <CardBody onOpen={onOpen} poster={poster} />
 
-      <CardControls />
+      <CardControls
+        onAddToList={onAddToList}
+        onAddToFavorite={onAddToFavorite}
+      />
 
       <CardModal
         title={title}
@@ -29,7 +34,7 @@ const CardContainer: FC<TCardContainerProps> = ({
         isOpen={isOpen}
         onClose={onClose}
       />
-    </>
+    </Box>
   );
 };
 

@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import ButtonIcon from 'components/ButtonIcon';
-import { TCardControls } from 'components/Card/types';
+import { TCardControlsProps } from 'components/Card/types';
 
-const CardControls: FC<TCardControls> = ({ onAddToList, onAddToFavorite }) => (
+const CardControls: FC<TCardControlsProps> = ({
+  onAddToList,
+  onAddToFavorite,
+}) => (
   <>
     <Flex
       className="controls"
@@ -11,6 +14,7 @@ const CardControls: FC<TCardControls> = ({ onAddToList, onAddToFavorite }) => (
       justifyContent="center"
       borderRadius="0 0 10px 10px"
       borderWidth="0 1px 1px"
+      p="6px"
     >
       <Box mr="10px" onClick={onAddToList}>
         <ButtonIcon iconName="plus" options="fa-sm" />
