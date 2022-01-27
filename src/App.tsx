@@ -3,6 +3,9 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { RouteWrapper } from 'routes';
 import theme from 'theme';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 const queryClient = new QueryClient();
 
 const App = () => (
