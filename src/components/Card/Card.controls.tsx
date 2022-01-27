@@ -12,8 +12,6 @@ const CardControls: FC<TCardControlsProps> = ({
       className="controls"
       alignItems="center"
       justifyContent="center"
-      borderRadius="0 0 10px 10px"
-      borderWidth="0 1px 1px"
       p="6px"
     >
       <Box mr="10px" onClick={onAddToList}>
