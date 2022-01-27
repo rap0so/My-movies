@@ -3,13 +3,15 @@ import { FC } from 'react';
 
 import { TCardProps } from './types';
 
+const size = '200px';
+
 const Card: FC<TCardProps> = ({ poster, onOpen }) => (
   <>
     <Flex flexDir="column">
       <Image
         alignSelf="center"
-        h="130px"
-        width="130px"
+        h={size}
+        width={size}
         objectFit="contain"
         src={poster}
         onClick={onOpen}
