@@ -1,7 +1,7 @@
-import { TGetUpcomingFn } from 'api/types';
+import { TMovieMethod } from 'api/types';
 import { TCardControlFn } from 'components/Card/types';
 
-type TMethodsAllowed = TGetUpcomingFn;
+type TMethodsAllowed = TMovieMethod;
 
 export type TSliderMoviesProps = TCardControlFn & {
   title: string;

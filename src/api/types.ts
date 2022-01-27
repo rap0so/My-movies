@@ -11,8 +11,10 @@ type TTMDBResponse = {
   ];
 };
 
-export type TGetUpcomingFn = (
+export type TMovieMethod = (
   context: QueryFunctionContext,
 ) => Promise<TTMDBResponse>;
+
+export type TGetMoviesByCategoryFn = (category: string) => TMovieMethod;
 
 export type TSearchFn = MutateFunction;
