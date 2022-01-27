@@ -1,15 +1,17 @@
-import { TGetUpcomingFn, TSearchFn } from 'api/types';
+import { TGetMoviesByCategoryFn } from 'api/types';
 import factory from './factory';
 
-export const getUpcoming: TGetUpcomingFn = async ({ pageParam: page }) => {
-  const { data } = await factory.get('/movie/upcoming', {
-    params: {
-      page,
-    },
-  });
+export const getMoviesByCategory: TGetMoviesByCategoryFn =
+  (category) =>
+  async ({ pageParam: page }) => {
+    const { data } = await factory.get(`/movie/${category}`, {
+      params: {
+        page,
+      },
+    });
 
-  return data;
-};
+    return data;
+  };
 
 export const search = async ({ page, query }: any) => {
   const { data } = await factory.get('/search/movie', {
