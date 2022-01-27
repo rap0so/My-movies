@@ -2,9 +2,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RouteWrapper } from 'routes';
 import theme from 'theme';
+import SwiperCore, { Navigation } from 'swiper';
 
-import 'swiper/css';
+import 'swiper/css/bundle';
 import 'swiper/css/pagination';
+
+SwiperCore.use([Navigation]);
 
 const queryClient = new QueryClient();
 

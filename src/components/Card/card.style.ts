@@ -8,17 +8,17 @@ export const cardStyle: CSSObject = {
   bgRepeat: 'no-repeat',
   bgSize: 'cover',
   cursor: 'pointer',
-  maxH: '130px',
+  filter: 'brightness(0.7)',
+  maxH: '200px',
   overflow: 'hidden',
   transition: 'all .5s ease',
-  w: '100px',
+  w: '200px',
 
   _hover: {
     '.controls': {
       opacity: 1,
     },
-    bgColor: '#000',
-    boxShadow: '0 0 100px 20px #000',
+    filter: 'brightness(1)',
     maxH: '340px',
     pos: 'relative',
     transform: 'scale(1.5)',
