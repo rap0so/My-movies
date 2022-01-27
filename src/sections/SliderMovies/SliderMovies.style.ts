@@ -4,7 +4,7 @@ const sliderMoviesStyle: CSSObject = {
   '.swiper': {
     padding: '100px 0',
 
-    '&:hover': {
+    _hover: {
       '.swiper-button-next, .swiper-button-prev': {
         opacity: 1,
       },

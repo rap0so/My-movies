@@ -5,10 +5,9 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
-  useOutsideClick,
   Text,
 } from '@chakra-ui/react';
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { TCardModalProps } from './types';
 
 const CardModal: FC<TCardModalProps> = ({
@@ -16,28 +15,17 @@ const CardModal: FC<TCardModalProps> = ({
   onClose,
   title,
   description,
-}) => {
-  const ref = useRef(null);
-
-  useOutsideClick({
-    ref,
-    handler: onClose,
-  });
-
-  return (
-    <>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{title}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text>{description}</Text>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
-    </>
-  );
-};
+}) => (
+  <Modal isOpen={isOpen} onClose={onClose} isCentered={true} trapFocus={false}>
+    <ModalOverlay />
+    <ModalContent>
+      <ModalHeader>{title}</ModalHeader>
+      <ModalCloseButton />
+      <ModalBody py="15px">
+        <Text>{description}</Text>
+      </ModalBody>
+    </ModalContent>
+  </Modal>
+);
 
 export default CardModal;
