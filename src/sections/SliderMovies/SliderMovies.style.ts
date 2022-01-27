@@ -2,12 +2,15 @@ import { CSSObject } from '@chakra-ui/react';
 
 const sliderMoviesStyle: CSSObject = {
   '.swiper': {
-    padding: '100px 0',
+    marginBottom: '-60px',
+    padding: '70px 0 100px',
+    transform: 'translate(-30px, -60px)',
 
     _hover: {
-      '.swiper-button-next, .swiper-button-prev': {
-        opacity: 1,
-      },
+      '.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)':
+        {
+          opacity: 1,
+        },
     },
   },
 
@@ -20,7 +23,7 @@ const sliderMoviesStyle: CSSObject = {
     fontWeight: 'bold',
     height: '200px',
     opacity: 0,
-    top: '122px',
+    top: '90px',
     width: '50px',
   },
 
