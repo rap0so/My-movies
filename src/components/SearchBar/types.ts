@@ -1,7 +1,7 @@
 import { ChangeEvent, CSSProperties } from 'react';
 import { DebouncedFunc } from 'lodash';
 
-type setQuery = (query: string) => void;
+type onQuery = (query: string) => void;
 
 export type THandleOnChangeFn = ({
   target,
@@ -14,5 +14,5 @@ export type TSearchBarProps = {
 };
 
 export type TSearchBarContainerProps = {
-  setQuery: setQuery;
+  onQuery: onQuery;
 };

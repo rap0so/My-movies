@@ -2,7 +2,7 @@ import { Box, Flex, Input } from '@chakra-ui/react';
 import { TSearchBarProps } from 'components/SearchBar/types';
 import { FC } from 'react';
 
-import { iconStyle } from './searchBar.style';
+import { iconStyle } from './SearchBar.style';
 
 const SearchBar: FC<TSearchBarProps> = ({
   handleOnChangeDebounced,
