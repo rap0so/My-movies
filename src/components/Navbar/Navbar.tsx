@@ -1,13 +1,24 @@
+import { Flex } from '@chakra-ui/react';
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
+
 import Logo from 'components/Logo';
+import SearchBar from 'components/SearchBar';
 
 import { TNavbarProps } from './types';
-import { Flex } from '@chakra-ui/react';
-import SearchBar from 'components/SearchBar';
 
 const Navbar: FC<TNavbarProps> = ({ onQuery }) => (
   <Flex justifyContent="space-between" px="20" py="20px">
-    <Logo />
+    <Flex>
+      <Link to="/">
+        <Logo />
+      </Link>
+
+      <Flex flexDir="row" alignItems="center" ml="45px">
+        <Link to="/my-list">My List</Link>
+      </Flex>
+    </Flex>
+
     <SearchBar onQuery={onQuery} />
   </Flex>
 );
