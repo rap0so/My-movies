@@ -2,15 +2,15 @@ import { QueryFunctionContext, MutateFunction } from 'react-query';
 
 type TTMDBResponse = {
   page: number;
-  results: [
-    {
-      id: number;
-      backdrop_path: string;
-      poster_path: string;
-      title: string;
-      overview: string;
-    },
-  ];
+  results: TTMDBMovie[];
+};
+
+export type TTMDBMovie = {
+  id: number;
+  backdrop_path: string;
+  poster_path: string;
+  title: string;
+  overview: string;
 };
 
 export type TMovieMethod = (
