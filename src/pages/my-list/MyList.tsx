@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { getAllMyList } from 'localStorage';
 import Gallery from 'components/Gallery';
+import Title from 'components/Title';
 
 const MyList = () => {
   const allStoragedMovies = getAllMyList();
@@ -8,9 +9,17 @@ const MyList = () => {
 
   return (
     <>
-      <Box ml="55px" mt="20">
-        <Flex flexWrap="wrap" maxW="container.xl" pb="28">
-          <Gallery title="My movies ❤️" movies={allMovies} />
+      <Box px={['10', '20']} mt={['10', '20']}>
+        <Title mb="10" textAlign={['center', 'left']}>
+          My movies ❤️
+        </Title>
+        <Flex
+          flexWrap="wrap"
+          maxW="container.xl"
+          pb="28"
+          justifyContent={['center', 'flex-start']}
+        >
+          <Gallery movies={allMovies} />
         </Flex>
       </Box>
     </>

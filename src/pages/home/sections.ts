@@ -7,7 +7,7 @@ const sections = [
   },
   {
     method: { action: getMoviesByCategory('top_rated'), name: 'getTopRated' },
-    title: 'PopCorn & Top Rated',
+    title: 'Top Rated',
   },
   {
     method: { action: getMoviesByCategory('popular'), name: 'getPopular' },

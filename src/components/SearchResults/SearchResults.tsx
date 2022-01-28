@@ -34,8 +34,9 @@ const SearchResults = forwardRef<HTMLDivElement, TSearchResultsProps>(
         <ModalBody py="15px">
           <Flex flexWrap="wrap" px="20" pb="28" justifyContent="space-between">
             <Gallery movies={movies} />
-            <Box ref={ref} />
           </Flex>
+
+          <Box ref={ref} />
         </ModalBody>
       </ModalContent>
     </Modal>
