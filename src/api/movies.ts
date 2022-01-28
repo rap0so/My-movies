@@ -1,4 +1,4 @@
-import { TGetMoviesByCategoryFn } from 'api/types';
+import { TGetMoviesByCategoryFn, TSearchMoviesFn } from 'api/types';
 import factory from './factory';
 
 export const getMoviesByCategory: TGetMoviesByCategoryFn =
@@ -13,7 +13,7 @@ export const getMoviesByCategory: TGetMoviesByCategoryFn =
     return data;
   };
 
-export const search = async ({ page, query }: any) => {
+export const search: TSearchMoviesFn = async ({ page, query }) => {
   const { data } = await factory.get('/search/movie', {
     params: {
       page,

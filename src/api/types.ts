@@ -1,6 +1,6 @@
 import { QueryFunctionContext, MutateFunction } from 'react-query';
 
-type TTMDBResponse = {
+export type TTMDBResponse = {
   page: number;
   results: TTMDBMovie[];
 };
@@ -18,5 +18,14 @@ export type TMovieMethod = (
 ) => Promise<TTMDBResponse>;
 
 export type TGetMoviesByCategoryFn = (category: string) => TMovieMethod;
+
+type TSearchMoviesProps = {
+  page: number;
+  query: string;
+};
+export type TSearchMoviesFn = ({
+  page,
+  query,
+}: TSearchMoviesProps) => Promise<TTMDBResponse>;
 
 export type TSearchFn = MutateFunction;
