@@ -44,7 +44,7 @@ const SliderMovies: FC<TSliderMoviesProps> = ({
   }
 
   return (
-    <Box ml="20" sx={sliderMoviesStyle}>
+    <Box sx={sliderMoviesStyle}>
       <Title>{sectionTitle}</Title>
       <Swiper {...swiperConfigs} onReachEnd={onFetchNextPage}>
         {data?.pages.map((group, index) => (

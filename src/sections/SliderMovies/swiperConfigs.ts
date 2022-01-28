@@ -1,6 +1,6 @@
 const swiperConfigs = {
   navigation: true,
-  slidesPerView: 10,
+  slidesPerView: 8.8,
   spaceBetween: 50,
 };
 

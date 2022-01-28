@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { TButtonIconProps } from './types';
 
 const ButtonIcon: FC<TButtonIconProps> = ({ iconName, isActive, options }) => {
-  const bgColor = isActive ? '#fff' : 'transparent';
+  const bgColor = isActive ? '#fff' : '#000';
 
   return (
     <Button
