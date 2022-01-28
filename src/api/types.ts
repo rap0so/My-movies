@@ -2,12 +2,12 @@ import { QueryFunctionContext, MutateFunction } from 'react-query';
 
 export type TTMDBResponse = {
   page: number;
+  total_pages: number;
   results: TTMDBMovie[];
 };
 
 export type TTMDBMovie = {
   id: number;
-  backdrop_path: string;
   poster_path: string;
   title: string;
   overview: string;

@@ -27,7 +27,7 @@ const SearchBarContainer: FC<TSearchBarContainerProps> = ({ onQuery }) => {
     return onQuery(target.value);
   };
 
-  const handleOnChangeDebounced = debounce(handleOnChange, 300);
+  const handleOnChangeDebounced = debounce(handleOnChange, 1000);
 
   return (
     <Box ref={ref}>
