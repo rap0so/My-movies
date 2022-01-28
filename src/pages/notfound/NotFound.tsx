@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NotFound: FC = () => (
   <Center h="100vh" flexDir="column">
     <Text fontSize="4xl">Hmmm... Page Not Found</Text>
-    <Text fontWeight="semibold" color="blue.500">
+    <Text fontWeight="semibold" color="white">
       <Link to="/">Go back home</Link>
     </Text>
   </Center>
