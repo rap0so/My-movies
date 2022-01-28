@@ -106,6 +106,8 @@ yarn lint:fix
 ## TODO
 
 - [] Add storybook
+- [] Add "x" to clear input
+- [] Clear input after search
 
 ## Author
 
