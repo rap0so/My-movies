@@ -1,9 +1,8 @@
 import { TMovieMethod } from 'api/types';
-import { TCardControlFn } from 'components/Card/types';
 
 type TMethodsAllowed = TMovieMethod;
 
-export type TSliderMoviesProps = TCardControlFn & {
+export type TSliderMoviesProps = {
   title: string;
   method: {
     name: string;

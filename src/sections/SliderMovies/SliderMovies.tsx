@@ -16,8 +16,6 @@ import swiperConfigs from './swiperConfigs';
 const SliderMovies: FC<TSliderMoviesProps> = ({
   title: sectionTitle,
   method,
-  onAddToList,
-  onAddToFavorite,
 }) => {
   const { isLoading, data, error, fetchNextPage } = useInfiniteQuery(
     method.name,
@@ -60,8 +58,6 @@ const SliderMovies: FC<TSliderMoviesProps> = ({
                     title={title}
                     description={overview}
                     id={id}
-                    onAddToList={onAddToList}
-                    onAddToFavorite={onAddToFavorite}
                   />
                 </SwiperSlide>
               ),

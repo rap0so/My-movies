@@ -5,28 +5,18 @@ import CardBody from './Card.body';
 import CardModal from './Card.modal';
 import CardControls from './Card.controls';
 
-import { TCardContainerProps } from './types';
 import { cardStyle } from './card.style';
+import { TMovie } from 'types';
 
-const CardContainer: FC<TCardContainerProps> = ({
-  backdrop,
-  poster,
-  title,
-  description,
-  id,
-  onAddToList,
-  onAddToFavorite,
-}) => {
+const CardContainer = (movie: TMovie) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { poster, title, description } = movie;
 
   return (
     <Box sx={cardStyle}>
       <CardBody onOpen={onOpen} poster={poster} />
 
-      <CardControls
-        onAddToList={onAddToList}
-        onAddToFavorite={onAddToFavorite}
-      />
+      <CardControls {...movie} />
 
       <CardModal
         title={title}
