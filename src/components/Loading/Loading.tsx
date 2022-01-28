@@ -1,9 +1,9 @@
 import { BarLoader } from 'react-spinners';
 
 import { TLoadingProps } from './types';
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
-const Loading = ({ full }: TLoadingProps) =>
+const Loading = ({ full, color = '#fff' }: TLoadingProps) =>
   full ? (
     <Flex
       alignItems="center"
@@ -16,9 +16,9 @@ const Loading = ({ full }: TLoadingProps) =>
       <BarLoader color="#fff" />
     </Flex>
   ) : (
-    <Box data-testid="bar">
-      <BarLoader />
-    </Box>
+    <Flex data-testid="bar">
+      <BarLoader color={color} />
+    </Flex>
   );
 
 export default Loading;

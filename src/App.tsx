@@ -1,16 +1,28 @@
-import { ApolloProvider } from '@apollo/client';
 import { ChakraProvider } from '@chakra-ui/react';
+import SwiperCore, { Navigation } from 'swiper';
 
-import apolloClient from 'helpers/apolloClient';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { RouteWrapper } from 'routes';
 import theme from 'theme';
+import { ToastContainer } from 'react-toastify';
+
+import 'swiper/css/bundle';
+import 'swiper/css/pagination';
+import 'react-toastify/dist/ReactToastify.css';
+
+SwiperCore.use([Navigation]);
+
+const queryClient = new QueryClient();
 
 const App = () => (
-  <ApolloProvider client={apolloClient}>
+  <>
     <ChakraProvider theme={theme}>
-      <RouteWrapper />
+      <QueryClientProvider client={queryClient}>
+        <RouteWrapper />
+      </QueryClientProvider>
     </ChakraProvider>
-  </ApolloProvider>
+    <ToastContainer hideProgressBar={false} pauseOnHover={true} />
+  </>
 );
 
 export default App;

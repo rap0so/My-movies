@@ -1,12 +1,12 @@
-<h1 align="center">Boilerplate TSX ✔️</h1>
+<h1 align="center">My Movies 🍿</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://opensource.org/licenses/MIT" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 </p>
 
-> Typescript web application boilerplate
+> Typescript web application to search for, add to list and favorite movies
 
 ## How to run?
 
@@ -94,18 +94,11 @@ yarn lint
 yarn lint:fix
 ```
 
-## Build with
-
-- [cra](https://create-react-app.dev) - Most common boilerplate to start react
-  projects
-- [typescript](https://www.typescriptlang.org) - JavaScript extention to add
-  types to the language
-- [cypress](https://www.cypress.io/) - Created to easily test end to end
-  front-end
-
 ## TODO
 
 - [] Add storybook
+- [] Add "x" to clear input
+- [] Clear input after search
 
 ## Author
 
