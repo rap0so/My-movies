@@ -1,5 +1,4 @@
 import { Box, useDisclosure } from '@chakra-ui/react';
-import { FC } from 'react';
 
 import CardBody from './Card.body';
 import CardModal from './Card.modal';

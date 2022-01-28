@@ -4,10 +4,10 @@ import { useInfiniteQuery } from 'react-query';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { toast } from 'react-toastify';
 
-import { IMAGERY_URL } from 'api/consts';
 import Loading from 'components/Loading';
 import Card from 'components/Card';
 import Title from 'components/Title';
+import createImagePath from 'helpers/createImagePath';
 
 import { TSliderMoviesProps } from './types';
 import sliderMoviesStyle from './SliderMovies.style';
@@ -49,19 +49,16 @@ const SliderMovies: FC<TSliderMoviesProps> = ({
       <Swiper {...swiperConfigs} onReachEnd={onFetchNextPage}>
         {data?.pages.map((group, index) => (
           <Box key={index}>
-            {group.results.map(
-              ({ backdrop_path, poster_path, title, overview, id }) => (
-                <SwiperSlide key={id}>
-                  <Card
-                    backdrop={`${IMAGERY_URL}${backdrop_path}`}
-                    poster={`${IMAGERY_URL}${poster_path}`}
-                    title={title}
-                    description={overview}
-                    id={id}
-                  />
-                </SwiperSlide>
-              ),
-            )}
+            {group.results.map(({ poster_path, title, overview, id }) => (
+              <SwiperSlide key={id}>
+                <Card
+                  poster={createImagePath(poster_path)}
+                  title={title}
+                  description={overview}
+                  id={id}
+                />
+              </SwiperSlide>
+            ))}
           </Box>
         ))}
       </Swiper>

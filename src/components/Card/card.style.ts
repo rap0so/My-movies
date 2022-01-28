@@ -4,14 +4,12 @@ export const cardStyle: CSSObject = {
   '.controls': {
     opacity: 0,
   },
-  bgPos: 'center',
-  bgRepeat: 'no-repeat',
-  bgSize: 'cover',
+  bgColor: '#000',
   cursor: 'pointer',
   filter: 'brightness(0.7)',
   maxH: '200px',
   overflow: 'hidden',
-  transition: 'all .5s ease',
+  pos: 'relative',
   w: '200px',
 
   _hover: {
@@ -21,9 +19,8 @@ export const cardStyle: CSSObject = {
     filter: 'brightness(1)',
     maxH: '340px',
     mb: '-300px',
-    pos: 'relative',
-    transform: 'scale(1.5) translate(0px, 0)',
-    transition: 'all .5s ease',
+    pb: '5px',
+    transform: 'scale(1.1)',
     zIndex: 1,
   },
 };

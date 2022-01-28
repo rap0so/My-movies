@@ -7,7 +7,7 @@ import { TGalleryProps } from './types';
 const Gallery: FC<TGalleryProps> = ({ movies }) => (
   <>
     {movies.map((movie) => (
-      <Box key={movie.id} mb="10">
+      <Box key={movie.id} m="10px 5px 20px">
         <Card {...movie} />
       </Box>
     ))}

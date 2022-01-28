@@ -4,7 +4,7 @@ const sliderMoviesStyle: CSSObject = {
   '.swiper': {
     marginBottom: '-60px',
     padding: '70px 0 100px',
-    transform: 'translate(-30px, -60px)',
+    transform: 'translate(0, -60px)',
 
     _hover: {
       '.swiper-button-next:not(.swiper-button-disabled), .swiper-button-prev:not(.swiper-button-disabled)':
