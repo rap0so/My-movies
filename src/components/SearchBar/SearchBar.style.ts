@@ -15,5 +15,3 @@ export const inputOpenedStyle: CSSProperties = {
 export const iconStyle: CSSProperties = {
   color: '#fff',
 };
-
-export default {};
