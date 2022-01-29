@@ -3,7 +3,7 @@ import { FC, useMemo, useRef } from 'react';
 import debounce from 'lodash.debounce';
 
 import { inputClosedStyle, inputOpenedStyle } from './SearchBar.style';
-import { TSearchBarContainerProps, THandleOnChangeFn } from './types';
+import { TSearchBarContainerProps, TOnQuery } from './types';
 import SearchBar from './SearchBar';
 
 const SearchBarContainer: FC<TSearchBarContainerProps> = ({ onQuery }) => {
@@ -19,12 +19,12 @@ const SearchBarContainer: FC<TSearchBarContainerProps> = ({ onQuery }) => {
     [focused],
   );
 
-  const handleOnChange: THandleOnChangeFn = ({ target }) => {
-    if (!target?.value) {
+  const handleOnChange: TOnQuery = (query) => {
+    if (!query) {
       return;
     }
 
-    return onQuery(target.value);
+    return onQuery(query);
   };
 
   const handleOnChangeDebounced = debounce(handleOnChange, 1000);
