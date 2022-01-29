@@ -7,7 +7,7 @@ const parseDataToGallery = (data?: TTMDBResponse): TMovie[] => {
     return [];
   }
 
-  return data.results.map(({ id, poster_path, title, overview }) => ({
+  return data.results?.map(({ id, poster_path, title, overview }) => ({
     id,
     title,
     description: overview,

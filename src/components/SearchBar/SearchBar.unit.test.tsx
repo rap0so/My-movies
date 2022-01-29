@@ -1,8 +1,5 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import {
-  inputClosedStyle,
-  inputOpenedStyle,
-} from 'components/SearchBar/SearchBar.style';
+import { inputClosedStyle } from 'components/SearchBar/SearchBar.style';
 import userEvent from '@testing-library/user-event';
 
 import SearchBar from './SearchBar';
