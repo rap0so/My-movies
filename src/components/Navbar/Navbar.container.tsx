@@ -2,11 +2,13 @@ import useInfiniteScroll from 'react-infinite-scroll-hook';
 import { FC, Ref, useCallback, useState } from 'react';
 import { useMutation } from 'react-query';
 import { search } from 'api';
-import Navbar from './Navbar';
-import Error from 'components/Error';
-import parseDataToGallery from 'components/Navbar/parseDataToGallery';
 import { TMovie } from 'types';
+
+import Error from 'components/Error';
 import SearchResults from 'components/SearchResults';
+
+import Navbar from './Navbar';
+import parseDataToGallery from './helpers/parseDataToGallery';
 
 const NavbarContainer: FC = () => {
   const [query, setQuery] = useState<string>('');

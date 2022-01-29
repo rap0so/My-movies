@@ -30,7 +30,7 @@ const SearchBarContainer: FC<TSearchBarContainerProps> = ({ onQuery }) => {
   const handleOnChangeDebounced = debounce(handleOnChange, 1000);
 
   return (
-    <Box ref={ref}>
+    <Box ref={ref} data-testid="searchbar-container">
       <SearchBar
         handleOnChangeDebounced={handleOnChangeDebounced}
         inputStyle={inputStyle}
