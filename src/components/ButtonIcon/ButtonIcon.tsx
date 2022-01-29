@@ -15,6 +15,7 @@ const ButtonIcon: FC<TButtonIconProps> = ({ iconName, isActive, options }) => {
       minWidth="0"
       p="0"
       w="25px"
+      data-testid="button-icon"
     >
       <i className={`fas fa-${iconName} ${options}`} />
     </Button>
