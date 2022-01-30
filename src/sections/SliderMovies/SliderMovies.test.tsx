@@ -6,32 +6,35 @@ import fakeApiReturn from '__mocks__/themoviedb-upcoming.json';
 
 import SliderMovies from '.';
 
-const queryClient = new QueryClient();
-
 SwiperCore.use([Navigation]);
 
 describe('SliderMovies', () => {
   let fakeMethod: any;
-  const fakeAction = jest.fn().mockImplementation(() => fakeApiReturn);
+  let fakeAction: any;
+  let queryClient: any;
 
-  afterEach(() => {
-    cleanup();
-    jest.resetAllMocks();
-  });
+  afterEach(cleanup);
 
   beforeEach(() => {
+    queryClient = new QueryClient();
+    fakeAction = jest.fn().mockImplementationOnce(() => fakeApiReturn);
+
     fakeMethod = {
       action: fakeAction,
       name: 'method',
     };
   });
 
-  it('should render cmp without crash', () => {
-    render(
+  it('should render <Loading/> when getting data', async () => {
+    const { getByTestId } = render(
       <QueryClientProvider client={queryClient}>
         <SliderMovies title="movie 1" method={fakeMethod} />
       </QueryClientProvider>,
     );
+
+    const loadingComponent = getByTestId('bar');
+
+    expect(loadingComponent).toBeInTheDocument();
   });
 
   it('should render received title', async () => {
@@ -53,11 +56,10 @@ describe('SliderMovies', () => {
       </QueryClientProvider>,
     );
 
-    await waitFor(() => {
-      const movies = getAllByTestId('card-container');
+    await waitFor(() => expect(fakeAction).toHaveBeenCalled());
 
-      expect(movies.length).toBe(20);
-      expect(fakeAction).toHaveBeenCalled();
-    });
+    const movies = getAllByTestId('card-container');
+
+    expect(movies.length).toBe(20);
   });
 });

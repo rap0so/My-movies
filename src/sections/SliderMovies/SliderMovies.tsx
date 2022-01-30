@@ -2,7 +2,6 @@ import { Box, Center } from '@chakra-ui/react';
 import { FC } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { toast } from 'react-toastify';
 
 import Loading from 'components/Loading';
 import Card from 'components/Card';
@@ -12,6 +11,7 @@ import createImagePath from 'helpers/createImagePath';
 import { TSliderMoviesProps } from './types';
 import sliderMoviesStyle from './SliderMovies.style';
 import swiperConfigs from './swiperConfigs';
+import Error from 'components/Error';
 
 const SliderMovies: FC<TSliderMoviesProps> = ({
   title: sectionTitle,
@@ -37,10 +37,7 @@ const SliderMovies: FC<TSliderMoviesProps> = ({
   }
 
   if (error) {
-    const humanizedError = error as Error;
-    toast.error(humanizedError.message);
-
-    return null;
+    return <Error error={error} />;
   }
 
   return (
