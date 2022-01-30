@@ -6,7 +6,7 @@ import {
   getAllMyList,
   setMyList,
   removeMyList,
-} from './';
+} from '.';
 
 const fakeMovie = {
   description: 'The title says for itself',
