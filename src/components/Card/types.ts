@@ -1,7 +1,7 @@
 import { UseDisclosureReturn } from '@chakra-ui/react';
 import { TModalProps } from 'types';
 
-export type TCardProps = {
+export type TCardBodyProps = {
   poster: string;
   onOpen: UseDisclosureReturn['onOpen'];
 };

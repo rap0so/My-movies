@@ -6,8 +6,10 @@ import { RouteWrapper } from 'routes';
 import theme from 'theme';
 import { ToastContainer } from 'react-toastify';
 
-import 'swiper/css/bundle';
-import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css'; // Navigation module
+import 'swiper/components/navigation/navigation.min.css'; // Navigation module
 import 'react-toastify/dist/ReactToastify.css';
 
 SwiperCore.use([Navigation]);

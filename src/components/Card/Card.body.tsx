@@ -1,11 +1,11 @@
 import { Flex, Image } from '@chakra-ui/react';
 import { FC } from 'react';
 
-import { TCardProps } from './types';
+import { TCardBodyProps } from './types';
 
-const size = '200px';
+export const size = ['160px', '200px'];
 
-const Card: FC<TCardProps> = ({ poster, onOpen }) => (
+const CardBody: FC<TCardBodyProps> = ({ poster, onOpen }) => (
   <>
     <Flex flexDir="column">
       <Image
@@ -21,4 +21,4 @@ const Card: FC<TCardProps> = ({ poster, onOpen }) => (
   </>
 );
 
-export default Card;
+export default CardBody;

@@ -32,7 +32,12 @@ const SearchResults = forwardRef<HTMLDivElement, TSearchResultsProps>(
         <ModalCloseButton />
 
         <ModalBody py="15px">
-          <Flex flexWrap="wrap" px="20" pb="28" justifyContent="space-between">
+          <Flex
+            flexWrap="wrap"
+            px={['0', '20']}
+            pb="28"
+            justifyContent="space-between"
+          >
             <Gallery movies={movies} />
           </Flex>
 

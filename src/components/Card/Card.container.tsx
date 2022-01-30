@@ -12,7 +12,7 @@ const CardContainer = (movie: TMovie) => {
   const { poster, title, description } = movie;
 
   return (
-    <Box sx={cardStyle}>
+    <Box sx={cardStyle} data-testid="card-container">
       <CardBody onOpen={onOpen} poster={poster} />
 
       <CardControls {...movie} />

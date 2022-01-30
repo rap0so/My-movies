@@ -8,8 +8,13 @@ import SearchBar from 'components/SearchBar';
 import { TNavbarProps } from './types';
 
 const Navbar: FC<TNavbarProps> = ({ onQuery }) => (
-  <Flex justifyContent="space-between" px={['10', '20']} py="20px">
-    <Flex>
+  <Flex
+    justifyContent="space-between"
+    px={['10', '20']}
+    py="20px"
+    flexDir={['column', 'row']}
+  >
+    <Flex mb={['20px', '0']} justifyContent="space-between">
       <Link to="/">
         <Logo />
       </Link>
