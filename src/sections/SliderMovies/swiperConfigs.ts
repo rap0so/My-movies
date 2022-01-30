@@ -1,6 +1,6 @@
-import { SwiperProps } from 'swiper/react';
+import { SwiperOptions } from 'swiper';
 
-const swiperConfigs: SwiperProps = {
+const swiperConfigs: SwiperOptions = {
   breakpoints: {
     1600: {
       slidesPerView: 7,
