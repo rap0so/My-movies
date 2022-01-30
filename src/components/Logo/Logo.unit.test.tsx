@@ -10,9 +10,9 @@ describe('Logo', () => {
   });
 
   it('should render the image', () => {
-    const { container } = render(<Logo />);
+    const { getByRole } = render(<Logo />);
 
-    const img = container.querySelector('img');
+    const img = getByRole('img') as HTMLImageElement;
 
     expect(img).toBeInTheDocument();
     expect(img?.src).toMatch(logoImage);
