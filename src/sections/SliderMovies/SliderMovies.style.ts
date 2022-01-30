@@ -1,7 +1,7 @@
 import { CSSObject } from '@chakra-ui/react';
 
 const sliderMoviesStyle: CSSObject = {
-  '.swiper': {
+  '.swiper-container-initialized': {
     marginBottom: '-60px',
     padding: '70px 0 100px',
     transform: 'translate(0, -60px)',
