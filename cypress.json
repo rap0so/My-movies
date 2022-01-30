@@ -1,5 +1,6 @@
 {
   "chromeWebSecurity": false,
   "video": false,
-  "baseUrl": "http://localhost:4100"
+  "baseUrl": "http://localhost:4100",
+  "integrationFolder": "cypress/e2e"
 }
