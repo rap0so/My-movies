@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react';
 import { FC } from 'react';
 import { toast } from 'react-toastify';
 
@@ -7,7 +8,7 @@ const Error: FC<TErrorProps> = ({ error }) => {
   const typedError = error as Error;
   toast.error(typedError.message);
 
-  return <></>;
+  return <Box data-testid="error" />;
 };
 
 export default Error;
