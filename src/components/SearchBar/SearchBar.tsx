@@ -15,14 +15,17 @@ const SearchBar: FC<TSearchBarProps> = ({
   return (
     <Flex
       alignItems="center"
-      justifyContent="space-between"
+      justifyContent="flex-end"
       data-testid="searchbar"
+      pos="relative"
     >
-      <Input style={inputStyle} onChange={onChange} />
+      <Input sx={inputStyle} onChange={onChange} />
       <Box
         ml="3"
         onClick={onClick}
         cursor="pointer"
+        pos={['absolute', 'static']}
+        right="10px"
         data-testid="search-wrapper"
       >
         <i className="fas fa-search fa-lg" style={iconStyle} />

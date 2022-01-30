@@ -1,4 +1,5 @@
-import { ChangeEvent, CSSProperties } from 'react';
+import { CSSObject } from '@chakra-ui/react';
+import { ChangeEvent } from 'react';
 import { DebouncedFunc } from 'lodash';
 
 export type TOnQuery = (query: string) => void;
@@ -9,7 +10,7 @@ export type THandleOnChangeFn = ({
 
 export type TSearchBarProps = {
   handleOnChangeDebounced: DebouncedFunc<TOnQuery>;
-  inputStyle: CSSProperties;
+  inputStyle: CSSObject;
   onClick: () => void;
 };
 

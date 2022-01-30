@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import { TCardProps } from './types';
 
-const size = '200px';
+export const size = ['160px', '200px'];
 
 const Card: FC<TCardProps> = ({ poster, onOpen }) => (
   <>

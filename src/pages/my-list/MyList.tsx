@@ -9,15 +9,14 @@ const MyList = () => {
 
   return (
     <>
-      <Box px={['10', '20']} mt={['10', '20']}>
+      <Box px={['0', '20']} mt={['10', '20']}>
         <Title mb="10" textAlign={['center', 'left']}>
-          My movies ❤️
+          My list of movies 🎬
         </Title>
         <Flex
           flexWrap="wrap"
-          maxW="container.xl"
           pb="28"
-          justifyContent={['center', 'flex-start']}
+          justifyContent={['space-around', 'flex-start']}
         >
           <Gallery movies={allMovies} />
         </Flex>
