@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import CardBody from './Card.body';
 
-describe('Error', () => {
+describe('CardBody', () => {
   let fakeFn: any;
   let poster: any;
 
