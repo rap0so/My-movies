@@ -37,23 +37,3 @@ it('should load more movies when click on next button', () => {
 
   cy.get('@firstSection').find('img').should('have.length', 40);
 });
-
-it('should add movies to my-list when click on control button', () => {
-  cy.get('.swiper-container').first().as('firstSection');
-
-  cy.get('@firstSection')
-    .find('[data-testid="card-container"]')
-    .first()
-    .find('button')
-    .first()
-    .click();
-
-  cy.wait(1000);
-
-  cy.get('@firstSection')
-    .find('[data-testid="card-container"]')
-    .eq(2)
-    .find('button')
-    .first()
-    .click();
-});
